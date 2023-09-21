@@ -1,0 +1,44 @@
+syntax="proto3";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace="EmployeeGrpc";
+
+package EmployeeGrpcApi;
+
+service EmployeeGrpcApi{
+    rpc getEmplyeeGrpc (google.protobuf.Empty) returns (employeeListResponse);
+    rpc getEmplyeeByIDGrpc (employeeIDRequest) returns (employeeIdResponse);
+    rpc addEmplyee(addRequest) returns (addResponse);
+    rpc updateEmplyee(updateEmployeeRequest) returns (updateEmployeeResponse);
+    rpc deleteEmplyee(employeeIDRequest) returns (updateEmployeeResponse);
+}
+message employeeListResponse{
+repeated employeeIdResponse request=1;
+}
+message addRequest{
+string Name=2;
+string Address=3;
+string Email=4;
+}
+message addResponse{
+    int32 StatusCode=1;
+    string Message=2;
+}
+message employeeIDRequest{
+    int32 Id=1;
+}
+message employeeIdResponse{
+    int32 Id=1;
+    string Name=2;
+    string Address=3;
+    string Email=4;
+}
+message updateEmployeeRequest{
+    int32 Id=1;
+    string Name=2;
+    string Address=3;
+    string Email=4;
+}
+message updateEmployeeResponse{
+    int32 Id=1;
+}

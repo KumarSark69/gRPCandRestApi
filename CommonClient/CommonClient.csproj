@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\EmployeeGRPC\EmployeeGRPC.csproj"/>
+    <ProjectReference Include="..\EmployeeRest\EmployeeRest.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="RestSharp" Version="110.2.1-alpha.0.13"/>
+    <PackageReference Include="Grpc.Net.Client" Version="2.57.0"/>
+    <PackageReference Include="Google.Protobuf" Version="4.0.0-rc2"/>
+    <PackageReference Include="Grpc.Tools" Version="2.58.0"/>
+    <PackageReference Include="Json.Net" Version="1.0.33"/>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="Protos\EmployeeGrpc.proto" GrpcServices="Client"/>
+  </ItemGroup>
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+</Project>

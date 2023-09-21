@@ -1,0 +1,3 @@
+obj/Debug/net7.0/Protos/EmployeeGrpc.cs \
+obj/Debug/net7.0/Protos/EmployeeGrpcGrpc.cs: /Users/anilkumar/.nuget/packages/grpc.tools/2.58.0/build/native/include/google/protobuf/empty.proto\
+ Protos/EmployeeGrpc.proto

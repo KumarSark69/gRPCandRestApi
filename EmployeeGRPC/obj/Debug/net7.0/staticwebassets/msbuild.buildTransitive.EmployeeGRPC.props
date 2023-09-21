@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/EmployeeGRPC.props" />
+</Project>
